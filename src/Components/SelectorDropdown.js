@@ -107,7 +107,7 @@ export default function SelectorDropdown(props) {
           ref={refInput}
           name={props.name}
           controlShouldRenderValue={false}
-          options={options}
+          options={options}         // array options[value,label]
           defaultInputValue={props.defaultValue}
           placeholder={
             props.placeholder || (
@@ -120,18 +120,20 @@ export default function SelectorDropdown(props) {
           components={{
             DropdownIndicator: () => null,
             IndicatorSeparator: () => null,
-            Option,
+            Option,         // UI OF options (from new Options component )
           }}
           closeMenuOnSelect={false}
           hideSelectedOptions={false}
           menuIsOpen={true}
+          isClearable={false}
           // maxMenuHeight={200}
           onChange={handleChange}
           onKeyDown={onKeyDown}
+          
         ></Select>
 
         <div className=" d-flex justify-content-end align-items-end buttonsDiv gap-4 py-2">
-          <button className="btn  btn-secondary-outline border"> cancel</button>
+          <button className="btn  btn-secondary-outline border" onClick={()=>{}}> cancel</button>
 
           <button
             ref={refElement}

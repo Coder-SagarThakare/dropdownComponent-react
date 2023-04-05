@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import SelectorDropdown from "./Components/SelectorDropdown.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Options from "./Components/Options";
+import Option from "./Components/Options";
 
 function App() {
   const [dropdownStatus, setDropdownStatus] = useState(true);
@@ -20,7 +20,7 @@ function App() {
           onChange={(event) => {
             // console.log(event);
           }}
-          setDropdownStatus={setDropdownStatus}
+          // setDropdownStatus={setDropdownStatus}
           dropdownStatus={dropdownStatus}
         />
 
@@ -35,6 +35,7 @@ function App() {
           setDropdownStatus={setDropdownStatus}
           dropdownStatus={dropdownStatus}
         >
+          <Option />
           </SelectorDropdown>
 
       </div>

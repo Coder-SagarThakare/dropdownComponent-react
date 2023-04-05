@@ -36,6 +36,9 @@
   accent-color:  #84E1BC !important ;
 
 }
+.dropdownMenu {
+    padding-left: 2% !important;
+}
 .dropdownMenu:hover {
   background-color: #e3fff5 !important;
   /* border: 0.5px solid rgb(219, 219, 219); */
