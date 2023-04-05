@@ -1,26 +1,17 @@
-/* .my-class {
-    background-color: rgb(0, 255, 255);
-} */
 
 .selectButtonColor {
-  background-color: #0e9f6e;
+  background-color: #0e9f6e !important;
+  color: white !important;
 }
 
 .name {
   color: #09090b;
   font-size: medium;
   font-weight: 450;
-  /* letter-spacing: 1px; */
   opacity: 90%;
 }
 .buttonsDiv {
-  /* bottom: 0; */
-  /* top: 100%; */
-  /* margin-top: 15rem; */
-  /* right: 0; */
-  /* position: ; */
-  
-  /* border: 1px solid ; */
+
   height: 90%;
 }
 .css-13cymwt-control {
@@ -30,13 +21,10 @@
   display: none;
 } */
 .editCheckbox {
-  background-color: #0e9f6e !important;
-  color: white;
+  /* background-color: #0e9f6e  !important; */
+  /* color: white; */
 }
-.dropdownMenu{
-    /* background-color: #09090b; */
 
-}
 .parentDiv{
     width: 300px;
     height: 320px;
@@ -44,33 +32,49 @@
 .input{
   width: 1rem;
   height: 1rem;
-  /* accent-color: #84E1BC; */
-  /* accent-color:  #58957e; */
-  accent-color: #58957e;  
-  /* background-color: #0e9f6e !important; */
-  /* background-color:  #84E1BC !important; */
-  /* color: white !important; */
-  /* background-color: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity))!important; */
+
+  accent-color:  #84E1BC !important ;
+
 }
 .dropdownMenu:hover {
   background-color: #e3fff5 !important;
   /* border: 0.5px solid rgb(219, 219, 219); */
-  /* border: 0.01px solid red; */
+
   border-radius: 5px;
 }
 .pointer {
   cursor: pointer;
 }
 
-.css-1nmdiq5-menu ,  .css-1n6sfyn-MenuList{
-}
 #react-select-2-listbox{
   border: 0px   !important;
+}
 
-}
-.css-qbdosj-Input {
-  /* background-color: #dcdcdc; */
-}
 .css-1xc3v61-indicatorContainer{
   display: none !important;
+}
+
+.css-1nmdiq5-menu{
+  box-shadow: none !important;
+}
+.checkbox{
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  background-color:#F9FAFB;
+  border:0.5px solid #D1D5DB;
+  border-radius: 0.2rem;
+}
+input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance:none ;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input[type="checkbox"]:checked{
+  background-color:#84E1BC ;
+  content: url('./Checkbox.png');
+  /* padding: 0.1rem; */
 }
