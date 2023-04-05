@@ -24,7 +24,7 @@ function App() {
           dropdownStatus={dropdownStatus}
         />
 
-        <SelectorDropdown
+        {/* <SelectorDropdown
           isMulti={false}
           name="fileType"
           // defaultValue="John Cena"
@@ -36,7 +36,7 @@ function App() {
           dropdownStatus={dropdownStatus}
         >
           <Option />
-          </SelectorDropdown>
+          </SelectorDropdown> */}
 
       </div>
     </>
