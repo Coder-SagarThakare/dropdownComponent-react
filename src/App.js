@@ -2,8 +2,9 @@ import { useState, useCallback } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import SelectorDropdown from "./Components/SelectorDropdown.js";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Option from "./Components/Options";
+import Options from "./Components/Options";
+// import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
   const [dropdownStatus, setDropdownStatus] = useState(true);
@@ -13,6 +14,7 @@ function App() {
     <>
       <div className="">
         <SelectorDropdown
+        optionsChildren = {Options}
           isMulti={true}
           name="fileType"
           // defaultValue="John Cena"
@@ -20,11 +22,12 @@ function App() {
           onChange={(event) => {
             // console.log(event);
           }}
-          // setDropdownStatus={setDropdownStatus}
+          setDropdownStatus={setDropdownStatus}
           dropdownStatus={dropdownStatus}
         />
 
-        {/* <SelectorDropdown
+        <SelectorDropdown
+        optionsChildren = {Options}
           isMulti={false}
           name="fileType"
           // defaultValue="John Cena"
@@ -35,8 +38,7 @@ function App() {
           setDropdownStatus={setDropdownStatus}
           dropdownStatus={dropdownStatus}
         >
-          <Option />
-          </SelectorDropdown> */}
+          </SelectorDropdown>
 
       </div>
     </>

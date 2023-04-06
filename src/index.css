@@ -1,17 +1,39 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@level components {
+  .css-13cymwt-control {
+    @apply rounded-[10px] ;
+  }
+  .checkbox {
+    @apply w-4 h-4 cursor-pointer bg-gray-50 border-gray-300 rounded-[0.2rem] border-[0.5px] border-solid;
+  }
+ 
+}
+@level base{
+  input[type="checkbox"] {
+    @apply appearance-none bg-[white] flex items-center justify-center checked:bg-[#84E1BC] checked:content-[url('./Components/Checkbox.png')];
+    -webkit-appearance: none;
+  }
+}

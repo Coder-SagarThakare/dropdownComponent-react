@@ -1,39 +1,38 @@
 import React from "react";
 import Avatar from "react-avatar";
 import { components } from "react-select";
+import './SelectorDropdown.css'
+
 
 export default function Options(props) {
   return (
+    // <div className="flex items-center gap-0.5 bg-gray-50  dropdownMenu "> = bs
     <components.Option
       {...props}
-      // className="d-flex align-items-center gap-1 bg-light dropdownMenu "
-      className="flex items-center gap-0.5 bg-gray-50  dropdownMenu border border-danger  "
+      className=" bg-black border-1 border-gray-900 pl-0 bg-white dropdownMenu "
+
     >
-      {/* {props.isMulti ? (
+      <div className="flex items-center px-0 " > 
+        {props.isMulti ? (
           <input
-            type="checkbox" 
-            // defaultChecked= {true}
+            // className="checkbox pointer "   
+            className="checkbox cursor-pointer "   
+            type="checkbox"
+            id="check"
             checked={props.isSelected}
             onChange={() => null}
           />
         ) : (
           ""
-        )} */}
+        )}
 
-      {props.isMulti ? (
-        <input
-          className="checkbox pointer border border-danger"
-          type="checkbox"
-          id="check"
-          checked={props.isSelected}
-          onChange={() => null}
-        />
-      ) : (
-        ""
-      )}
+        {/* <Avatar name={props.label} size="20" round={true} className="mx-1 " /> */}
+        <Avatar name={props.label} size="20" round={true} className="mx-1 " />  
 
-      <Avatar name={props.label} size="20" round={true} className="mx-1 border border-danger" />
-      <label className="name mx-2 underline border border-danger">{props.label}</label>
+        {/* <label className="name mx-2 ">{props.label}</label> */}
+        <label className="font-medium text-[#09090b] mx-2 ">{props.label}</label>
+      </div>
     </components.Option>
+    // </div>
   );
 }

@@ -17,6 +17,7 @@ SelectorDropdown.propTypes = {
   style: PropTypes.object,
   dropdownStatus: PropTypes.bool,
   setDropdownStatus: PropTypes.func,
+  optionsChildren : PropTypes.any
 };
 
 export default function SelectorDropdown(props) {
@@ -101,7 +102,9 @@ export default function SelectorDropdown(props) {
 
   return (
     <>
-      <div className="parentDiv mx-auto p-2 border">
+      {/* <div className="parentDiv mx-auto p-2 border "> */}
+      {/* <div className="parentDiv "> */}
+      <div className="parentDiv mx-auto p-2 border border-gray-400"> 
         <Select
           {...props}
           ref={refInput}
@@ -111,7 +114,7 @@ export default function SelectorDropdown(props) {
           defaultInputValue={props.defaultValue}
           placeholder={
             props.placeholder || (
-              <div className="d-flex gap-1">
+              <div className="flex gap-1">
                 <img src={search}></img> <span>Search</span>
               </div>
             )
@@ -120,7 +123,7 @@ export default function SelectorDropdown(props) {
           components={{
             DropdownIndicator: () => null,
             IndicatorSeparator: () => null,
-            Option,         // UI OF options (from new Options component )
+            Option:props.optionsChildren ,         // UI OF options (from new Options component )
           }}
           closeMenuOnSelect={false}
           hideSelectedOptions={false}
@@ -132,13 +135,17 @@ export default function SelectorDropdown(props) {
           
         ></Select>
 
-        <div className=" d-flex justify-content-end align-items-end buttonsDiv gap-4 py-2">
-          <button className="btn  btn-secondary-outline border" onClick={()=>{}}> cancel</button>
+        {/* <div className=" d-flex justify-content-end align-items-end buttonsDiv gap-4 py-2"> BS */}
+        <div className="flex justify-end items-end  gap-4 py-2  mt-56 ">
+
+          {/* <button className="btn  btn-secondary-outline border" onClick={()=>{}}> cancel</button>  = bs */}
+          <button className="rounded border px-3 py-1" onClick={()=>{}}> cancel</button>
 
           <button
             ref={refElement}
-            className="btn selectButtonColor"
-            disabled
+            // className="btn selectButtonColor" = bs
+            // className="rounded  border-t-4 border-gray-500 border-l-12 border-r-12 border-b-5  selectButtonColor"
+            className="px-3 py-1 rounded cursor-pointer disabled:opacity-25 bg-[#0e9f6e] text-white" disabled 
           >
             {" "} 
             select
